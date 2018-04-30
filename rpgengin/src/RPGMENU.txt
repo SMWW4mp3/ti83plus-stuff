@@ -1,0 +1,380 @@
+AxesOff
+0→Xmin:94→Xmax
+0→Ymin:62→Ymax
+Equ►String(Y₁,Str1
+Equ►String(Y₂,Str2
+Equ►String(Y₃,Str3
+Equ►String(Y₄,Str4
+Equ►String(Y₅,Str5
+Equ►String(Y₆,Str6
+Equ►String(Y₇,Str7
+Equ►String(Y₈,Str8
+Equ►String(Y₉,Str9
+Equ►String(Y₀,Str0
+DelVar Y₁
+DelVar Y₂
+DelVar Y₃
+DelVar Y₄
+DelVar Y₅
+DelVar Y₆
+DelVar Y₇
+DelVar Y₈
+DelVar Y₉
+DelVar Y₀
+Lbl 0
+ClrDraw
+Vertical 0
+Horizontal 0
+Horizontal 62
+Vertical 94
+Pt-Off(94,0
+Pt-Off(94,62
+Pt-Off(0,62
+Pt-Off(0,0
+Vertical 24
+Pt-Off(24,62
+Pt-Off(24,0
+Line(1,0,23,0
+Line(1,62,23,62
+Text(2,7,"ITEM
+Text(9,7,"M+E
+Text(16,7,"BACK
+Text(23,7,"QUIT
+Text(33,2,"G:
+Text(33,8,ʟRPGG(1
+Line(0,30,24,30
+Text(40,2,"HP:
+Text(40,12,ʟRPGC(4
+Text(47,2,"MP:
+Text(47,12,ʟRPGC(5
+Text(2,26,"EQUIPMENT:
+Text(9,30,"WPN:
+Text(9,50,"ARM:
+Text(9,70,"ACC:
+Text(23,26,"STATUS:
+Text(30,26,"STR:
+Text(37,26,ʟRPGC(1
+Text(30,47,"AGI:
+Text(37,47,ʟRPGC(2
+Text(30,70,"INT:
+Text(37,70,ʟRPGC(3
+Text(44,26,"MAGIC:
+If ʟRPGC(6)=1
+Then
+Text(51,30,"HEAL
+End
+If ʟRPGC(7)=1
+Then
+Text(51,50,"FIRE
+End
+If ʟRPGC(8)=1
+Then
+Text(51,70,"STAT+
+End
+{2,2,0→ʟRPGθ
+Lbl L
+0→A
+Text(ʟRPGθ(2),ʟRPGθ(1),">
+While A=0
+getKey→A
+End
+Text(ʟRPGθ(2),ʟRPGθ(1),"    
+If A=25 and ʟRPGθ(2)≠2 and ʟRPGθ(3)=0
+Then
+ʟRPGθ(2)-7→ʟRPGθ(2)
+End
+If A=34 and ʟRPGθ(2)≠23 and ʟRPGθ(3)=0
+Then
+ʟRPGθ(2)+7→ʟRPGθ(2)
+End
+If A=21 or A=26 and ʟRPGθ(3)=0
+Then
+If ʟRPGθ(2)=2
+Then
+Goto I
+End
+If ʟRPGθ(2)=9
+Then
+{26,9,1→ʟRPGθ
+End
+If ʟRPGθ(2)=16
+Then
+Return
+End
+If ʟRPGθ(2)=23
+Then
+ClrDraw
+ZStandard
+AxesOn
+String►Equ(Str1,Y₁
+String►Equ(Str2,Y₂
+String►Equ(Str3,Y₃
+String►Equ(Str4,Y₄
+String►Equ(Str5,Y₅
+String►Equ(Str6,Y₆
+String►Equ(Str7,Y₇
+String►Equ(Str8,Y₈
+String►Equ(Str9,Y₉
+String►Equ(Str0,Y₀
+ClrHome
+GarbageCollect
+Stop
+End
+End
+If ʟRPGθ(2)≠2 and A=25 and ʟRPGθ(3)=1
+Then
+{26,9,1→ʟRPGθ
+End
+If ʟRPGθ(2)≠51 and A=34 and ʟRPGθ(3)=1
+Then
+{26,51,1→ʟRPGθ
+End
+If ʟRPGθ(3)=1 and A=31
+Then
+{2,2,0→ʟRPGθ
+End
+If A=24 and ʟRPGθ(2)=9 and ʟRPGθ(3)=1 and ʟRPGθ(1)≠26
+Then
+ʟRPGθ(1)-20→ʟRPGθ(1)
+End
+If ʟRPGθ(3)=1 and ʟRPGθ(1)≠66 and A=26 and ʟRPGθ(2)=9
+Then
+ʟRPGθ(1)+20→ʟRPGθ(1)
+End
+If ʟRPGθ(3)=1 and ʟRPGθ(2)=51 and A=21 and ʟRPGC(1)*2>ʟRPGC(4) and ʟRPGC(5)≥3 and ʟRPGC(6)=1
+Then
+ʟRPGC(5)-3→ʟRPGC(5)
+Text(47,12,ʟRPGC(5
+ʟRPGC(3)*2+ʟRPGC(4)→ʟRPGC(4)
+If ʟRPGC(4)>ʟRPGC(1)*2
+Then
+ʟRPGC(1)*2→ʟRPGC(4)
+End
+Text(40,12,ʟRPGC(4)
+End
+If ʟRPGθ(3)=1 and ʟRPGθ(1)=26 and A=21
+Then
+Goto WA
+End
+If ʟRPGθ(3)=1 and ʟRPGθ(1)=46 and A=21
+Then
+Goto WB
+End
+If ʟRPGθ(1)=64 and ʟRPGθ(3)=1 and A=21
+Then
+Goto WC
+End
+Goto L
+Lbl I
+ClrDraw
+Vertical 0
+Vertical 94
+Horizontal 0
+Horizontal 62
+Horizontal 8
+Pt-Off(0,0
+Pt-Off(0,62
+Pt-Off(94,0
+Pt-Off(94,62
+{2,2,2→ʟRPGθ
+Text(55,2,"HP:
+Text(55,12,ʟRPGC(4
+Text(55,46,"MP:
+Text(55,56,ʟRPGC(5
+If ʟRPGI(1)≠0
+Then
+Text(2,6,"HERB
+Text(2,36,ʟRPGI(1
+Text(2,46,"HEALS 25 HP
+End
+If ʟRPGI(2)≠0
+Then
+Text(9,6,"ROOT
+Text(9,36,ʟRPGI(2
+Text(9,46,"RESTORES 15 MP
+End
+If ʟRPGI(3)≠0
+Then
+Text(16,6,"STR +
+Text(16,36,ʟRPGI(3
+Text(16,46,"RAISES YOUR S
+End
+If ʟRPGI(4)≠0
+Then
+Text(23,6,"AGI +
+Text(23,36,ʟRPGI(4
+Text(23,46,"RAISES YOUR A
+End
+If ʟRPGI(5)≠0
+Then
+Text(30,6,"INT +
+Text(30,36,ʟRPGI(5
+Text(30,46,"RAISES YOUR I
+End
+If ʟRPGI(6)≠0
+Then
+Text(37,6,"TENT
+Text(37,36,ʟRPGI(6
+Text(37,46,"HEAL ALL [MAP]
+End
+If ʟRPGI(7)≠0
+Then
+Text(44,6,"LIFE
+Text(44,36,ʟRPGI(7
+Text(44,46,"[AUTO] REVIVES
+End
+Lbl I0
+0→A
+Text(ʟRPGθ(2),ʟRPGθ(1),">
+While A=0
+getKey→A
+End
+Text(ʟRPGθ(2),ʟRPGθ(1),"   
+If A=31
+Then
+Goto 0
+End
+If ʟRPGθ(2)≠2 and A=25
+Then
+ʟRPGθ(2)-7→ʟRPGθ(2
+End
+If ʟRPGθ(2)≠44 and A=34
+Then
+ʟRPGθ(2)+7→ʟRPGθ(2
+End
+If A=21
+Then
+If ʟRPGθ(2)=2 and ʟRPGC(4)<ʟRPGC(1)*2 and ʟRPGI(1)≥1
+Then
+ʟRPGC(4)+25→ʟRPGC(4)
+ʟRPGI(1)-1→ʟRPGI(1
+If ʟRPGC(4)>ʟRPGC(1)*2
+Then
+ʟRPGC(1)*2→ʟRPGC(4)
+End
+End
+If ʟRPGθ(2)=9 and ʟRPGI(2)≥1 and ʟRPGC(5)<ʟRPGC(3
+Then
+ʟRPGI(2)-1→ʟRPGI(2
+ʟRPGC(5)+10→ʟRPGC(5
+If ʟRPGC(5)>ʟRPGC(3
+Then
+ʟRPGC(3)→ʟRPGC(5
+End
+End
+If ʟRPGθ(2)=16 and ʟRPGI(3)≥1 and ʟRPGC(1)≠255
+Then
+ʟRPGC(1)+1→ʟRPGC(1
+ʟRPGI(3)-1→ʟRPGI(3
+End
+If ʟRPGθ(2)=23 and ʟRPGC(2)≠255 and ʟRPGI(4)≥1
+Then
+ʟRPGC(2)+1→ʟRPGC(2
+ʟRPGI(4)-1→ʟRPGI(4
+End
+If ʟRPGθ(2)=30 and ʟRPGI(5)≥1 and ʟRPGC(3)≠255
+Then
+ʟRPGC(3)+1→ʟRPGC(3
+ʟRPGI(5)-1→ʟRPGI(5
+End
+If ʟRPGθ(2)=37
+Then
+ClrHome
+Output(1,1,"TENT:
+Output(2,1,"----------------
+Output(3,1,"THIS ITEM HEALS ONLY ON THE MAP.PRESS ON THE MAP[2], TO USE IT! [ENTER] = BACK
+Pause 
+End
+If ʟRPGθ(2)=44
+Then
+ClrHome
+Output(1,1,"LIFE
+Output(2,1,"----------------THIS ITEM WILL  USE ITSELF AUTO⁻MATICALLY, IF   YOU DIE. GIVES  YOU 25HP BACK.  [ENTER] = BACK
+Pause 
+End
+Goto I
+End
+Goto I0
+Lbl WA
+ClrDraw
+Horizontal 0
+Horizontal 62
+Vertical 0
+Vertical 94
+Horizontal 52
+Pt-Off(0,0
+Pt-Off(0,62
+Pt-Off(94,62
+Pt-Off(94,0
+{2,12,4→ʟRPGθ
+If ʟRPGE(1)=0
+Then
+Text(2,2,"NOTHIG
+End
+If ʟRPGE(1)=1
+Then
+Text(2,2,"STICK
+End
+If ʟRPGE(1)=2
+Then
+Text(2,2,"DAGGER
+End
+If ʟRPGE(1)=3
+Then
+Text(2,2,"BOW
+End
+If ʟRPGE(1)=4
+Then
+Text(2,2,"SWORD
+End
+If ʟRPGE(1)=5
+Then
+Text(2,2,"AXE
+End
+If ʟRPGE(1)=6
+Then
+Text(2,2,"DUCK
+End
+Text(12,6,"NOTHING [+0STR]
+If ʟRPGL(1)≥1
+Then
+Text(19,6,"STICK [+1STR]
+End
+If ʟRPGL(1)≥2
+Then
+Text(26,6,"DAGGER [+2STR]
+End
+If ʟRPGL(1)≥3
+Then
+Text(33,6,"BOW [+4STR]
+End
+If ʟRPGL(1)≥4
+Then
+Text(40,6,"SWORD [+6STR]
+End
+If ʟRPGL(1)≥5
+Then
+Text(47,6,"AXE [+9STR]
+End
+If ʟRPGL(1)≥7
+Then
+Text(54,6,"DUCK [+12STR]
+End
+Lbl W1
+0→A
+Text(ʟRPGθ(2),ʟRPGθ(1),">
+While A=0
+getKey→A
+End
+If A=25 and ʟRPGθ(2)≠12
+Then
+ʟRPGθ(2)-7→ʟRPGθ(2
+End
+If A=34 and ʟRPGθ(2)≠54
+Then
+ʟRPGθ(2)+7→ʟRPGθ(2
+End
+If A=21
+Then
+End
+Goto W1

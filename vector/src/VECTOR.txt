@@ -1,0 +1,170 @@
+ClrDraw
+ZDecimal
+⁻3→A
+DrawF X
+While A≠3
+Pt-On(A,A+.1
+Pt-On(A,A+.2
+A+.5→A
+End
+Menu("VECTOR+3D","3D:DOT",D,"3D:BOX",B,"VE:VECTOR CALC",V,"VE:VECTOR DRWL",W,"VE:VECTOR DRWB",W1,"EXIT",X
+Lbl X
+Return
+Lbl D
+0→Z
+Goto 0
+Lbl B
+1→Z
+Lbl 0
+Input "X1=",S
+Input "X2=",T
+Input "X3=",U
+.5S→S
+Pt-On(T-S,U-S,2
+Text(0,0,"X1=",2S
+Text(7,0,"X2=",T
+Text(14,0,"X3=",U
+If Z=1
+Then
+Line(⁻S,⁻S,⁻S,U-S
+Line(⁻S,⁻S,T-S,⁻S
+Line(T-S,⁻S,T-S,U-S
+Line(T-S,U-S,⁻S,U-S
+Line(T,U,T,0
+Line(T,U,0,U
+Line(⁻S,U-S,0,U
+Line(T-S,U-S,T,U
+Line(T-S,⁻S,T,0
+End
+0→A
+While A=0
+getKey→A
+End
+If A=41
+Then
+ClrDraw
+AxesOff
+Text(0,0,"A:(",2S,"!0!0)"
+Text(7,0,"B:(",2S,"!",T,"!0)
+Text(14,0,"C:(0!",T,"!0)
+Text(21,0,"D:(0!0!0)
+Text(28,0,"E:(",2S,"!0!",U,")
+Text(35,0,"F:(",2S,"!",T,"!",U,")
+Text(42,0,"G:(0!",T,"!",U,")
+Text(49,0,"H:(0!0!",U,")
+End
+Return
+Lbl V
+3→Z
+ClrHome
+Disp "OPERATOR?","1: +","2: -","3: *
+0→A
+While A=0
+getKey→A
+End
+If A=92 or A=95
+Then
+0→Z
+End
+If A=93 or A=85
+Then
+1→Z
+End
+If A=94 or A=75
+Then
+2→Z
+End
+If Z=3
+Then
+Goto V
+End
+Input "X1=",S
+Input "X2=",T
+Input "X3=",U
+If Z=0
+Then
+Input "Y1=",N
+Input "Y2=",O
+Input "Y3=",P
+ClrHome
+Output(1,1,"-> (
+Output(2,1,"AB=(
+Output(3,4,"(
+Output(1,5,S+N
+Output(2,5,T+O
+Output(3,5,U+P
+Output(1,16,")
+Output(2,16,")
+Output(3,16,")
+Return
+End
+If Z=1
+Then
+Input "Y1=",N
+Input "Y2=",O
+Input "Y3=",P
+ClrHome
+Output(1,1,"-> (
+Output(2,1,"AB=(
+Output(3,4,"(
+Output(1,5,S-N
+Output(2,5,T-O
+Output(3,5,U-P
+Output(1,16,")
+Output(2,16,")
+Output(3,16,")
+Return
+End
+If Z=2
+Then
+Input "ʳ:",A
+ClrHome
+Output(1,1,"-> (
+Output(2,1,"AB=(
+Output(3,4,"(
+Output(1,5,SA
+Output(2,5,TA
+Output(3,5,UA
+Output(1,16,")
+Output(2,16,")
+Output(3,16,")
+Return
+End
+Return
+Lbl W1
+1→Z
+Goto W2
+Lbl W
+0→Z
+Lbl W2
+ClrHome
+Disp "VECTOR LENGTH:
+Input "V1=",N
+Input "V2=",O
+Input "V3=",P
+ClrHome
+Disp "VECTOR START AT:
+Input "X1=",S
+Input "X2=",T
+Input "X3=",U
+.5S→S
+.5N→N
+ClrHome
+Line(T-S,U-S,T-S+O-N,U-S+P-N
+Pt-On(T-S+O-N,U-S+P-N,3
+If Z=1
+Then
+Line(T-S,U-S,T-S+O-N,U-S
+Line(T-S,U-S,T-S,U-S+P-N
+Line(T-S,U-S+P-N,T-S+O-N,U-S+P-N
+Line(T-S+O-N,U-S,T-S+O-N,U-S+P-N
+Pause 
+Line(T,U,T+O,U
+Pause 
+Line(T,U,T,U+P
+Pause 
+Line(T+O,U,T+O,U+P
+Pause 
+Line(T,U+P,T+O,U+P
+Pause 
+End

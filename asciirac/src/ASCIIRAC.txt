@@ -1,0 +1,107 @@
+0→F:0→D
+8→S:1→L
+ClrHome
+Output(1,1," *=*   *=*
+Output(3,1,"/^π^/^/^π/^ππ/^^
+Output(4,1,"----------------
+Lbl 0
+ʟASCII(L)→D
+If ʟASCII(L+1)=⁻1
+Then
+Output(8,16,"<
+End
+If ʟASCII(L+1)=1
+Then
+Output(8,16,">
+End
+If D=π
+Then
+Goto EN
+End
+If D=0 and F=0
+Then
+Output(5,1,"     + ! +      
+Output(6,1,"    +     +     
+Output(7,1,"   +   !   +    
+Output(8,1,"  +         +   
+End
+If D=0 and F=1
+Then
+Output(5,1,"     +   +      
+Output(6,1,"    +  !  +     
+Output(7,1,"   +       +    
+Output(8,1,"  +    !    +  
+End
+If D=⁻1 and F=0
+Then
+Output(5,1,"+ * ++          
+Output(6,1," +     ++        
+Output(7,1,"  +   *   ++    
+Output(8,1,"   +         ++ 
+End
+If D=⁻1 and F=1
+Then
+Output(5,1,"+   ++          
+Output(6,1," +  *  ++
+Output(7,1,"  +       ++    
+Output(8,1,"   +    *    ++ 
+End
+If D=1 and F=0
+Then
+Output(5,1,"          ++ * +
+Output(6,1,"       ++     + 
+Output(7,1,"    ++   *   +  
+Output(8,1," ++         +   
+End
+If D=1 and F=1
+Then
+Output(5,1,"          ++   +
+Output(6,1,"       ++  *  + 
+Output(7,1,"    ++       +  
+Output(8,1," ++    *    +   
+End
+abs(F-1)→F
+Output(8,S,"≤≥
+getKey→A
+If A=24
+Then
+S-1→S
+End
+If A=26
+Then
+S+1→S
+End
+If D=⁻1
+Then
+S+1→S
+End
+If D=1
+Then
+S-1→S
+End
+If F=0
+Then
+L+1→L
+End
+If D=⁻1 and S=15
+Then
+Goto GO
+End
+If D=0
+Then
+If S=3 or S=13
+Then
+Goto GO
+End
+End
+If D=1 and S=3
+Then
+Goto GO
+End
+Goto 0
+Lbl EN
+ClrHome
+Disp "A WINNER IS YOU!
+Return
+Lbl GO
+Disp "A LOOSER IS YOU!

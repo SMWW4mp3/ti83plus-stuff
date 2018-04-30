@@ -1,0 +1,228 @@
+0→K
+ClrDraw
+{0,0,0→ʟRPGθ
+Horizontal 16
+Horizontal 8
+Horizontal 54
+Line(1,13,11,13
+Line(1,11,11,11
+Pt-On(0,12
+Pt-On(12,12
+Text(48,14,"HP:
+Text(48,40,"MP:
+1→A
+0→B
+Lbl AT
+Text(56,4,"ATTACK
+Text(56,34,"MAGIC
+Text(56,64,"ITEM    
+24→C
+While C≠38
+Text(48,C," 
+Text(48,C+26," 
+C+1→C
+End
+Text(48,24,ʟRPGC(4
+Text(48,50,ʟRPGC(5
+While A<11
+ʟRPGC(2)/50+A→A
+Line(A,12,0,12
+ʟRPGF(2)/50+B→B
+If B≥10
+Then
+Goto MA
+End
+End
+Line(1,12,11,12
+1→A
+While A≠12
+Pt-Off(A,12
+A+1→A
+End
+Lbl F1
+Text(56,ʟRPGθ(2),">
+Text(56,4,"ATTACK
+Text(56,34,"MAGIC
+Text(56,64,"ITEM   
+0→A
+While A=0
+getKey→A
+End
+Text(56,ʟRPGθ(2),"   
+If A=21
+Then
+If ʟRPGθ(2)=0
+Then
+Goto F2
+End
+If ʟRPGC(5)≥2 and ʟRPGθ(2)=30 and ʟRPGC(6)≠0 or ʟRPGC(7)≠0 or ʟRPGC(8)≠0
+Then
+Goto F3
+End
+If ʟRPGθ(2)=60
+Then
+Goto FI
+End
+End
+If A=24 and ʟRPGθ(2)≠0
+Then
+ʟRPGθ(2)-30→ʟRPGθ(2
+End
+If A=26 and ʟRPGθ(2)≠60
+Then
+ʟRPGθ(2)+30→ʟRPGθ(2
+End
+Goto F1
+Lbl F2
+ʟRPGC(1)+randInt(1,4)+K→A
+Text(0,0,"YOU DID ",A," DAMAGE.
+ʟRPGF(4)-A→ʟRPGF(4
+Lbl WC
+If ʟRPGF(4)≤0
+Then
+Goto W
+End
+0→A
+94→C
+While A≠48
+Text(0,A," 
+Text(0,C," 
+A+1→A
+C-1→C
+End
+0→A
+Goto AT
+Lbl F3
+{0,0,1→ʟRPGθ
+0→A
+82→C
+While A≠42
+Text(56,A," 
+Text(56,C," 
+A+1→A
+C-1→C
+End
+If ʟRPGC(7)=1
+Then
+Text(56,4,"FIRE
+End
+If ʟRPGC(6)=1
+Then
+Text(56,34,"HEAL
+End
+If ʟRPGC(8)=1
+Then
+Text(56,64,"STAT+
+End
+Lbl F5
+0→A
+Text(56,ʟRPGθ(2),">
+While A=0
+getKey→A
+End
+Text(56,ʟRPGθ(2),"   
+If A=24 and ʟRPGθ(2)≠0
+Then
+ʟRPGθ(2)-30→ʟRPGθ(2
+Goto F5
+End
+If A=26 and ʟRPGθ(2)≠60
+Then
+ʟRPGθ(2)+30→ʟRPGθ(2
+Goto F5
+End
+If A=21
+Then
+If ʟRPGθ(2)=0 and ʟRPGC(7)=1 and ʟRPGC(5)≥3
+Then
+ʟRPGC(3)*2+randInt(5,8)+K-ʟRPGF(3)→A
+If A≤0
+Then
+Text(0,0,"YOU HAVE FAILED.
+Else
+Text(0,0,"YOU DID ",A," DAMAGE."
+End
+ʟRPGC(5)-3→ʟRPGC(5
+Goto WC
+End
+If ʟRPGθ(2)=30 and ʟRPGC(5)≥2 and ʟRPGC(6)=1
+Then
+ʟRPGC(3)+randInt(1,5)→A
+Text(0,0,"YOU HEALED ",A," HP.
+ʟRPGC(4)+A→ʟRPGC(4
+ʟRPGC(5)-2→ʟRPGC(5
+If ʟRPGC(1)*2≤ʟRPGC(4
+Then
+ʟRPGC(1)*2→ʟRPGC(4
+End
+Goto WC
+End
+If ʟRPGθ(2)=60 and ʟRPGC(5)≥33 and ʟRPGC(8)=1
+Then
+randInt(ʟRPGC(3),ʟRPGC(3)+3→K
+ʟRPGC(5)-33→ʟRPGC(5
+Text(0,0,"YOU STATS ROSE BY ",K," PTS.
+Goto WC
+End
+End
+Goto F5
+Lbl FI
+94→C:0→A:While A≠48
+Text(56,A," 
+Text(56,C,"
+A+1→A
+C-1→C
+End
+Text(56,4,"BACK
+Text(
+
+0→A
+Text(56,ʟRPGθ(2),">
+While A=0
+getKey→A
+End
+Text(56,ʟRPGθ(2),"   
+If A=24 and ʟRPGθ(2)≠0
+Then
+A-30→A
+End
+If A=26 and ʟRPGθ(2)≠60
+Then
+A+30→A
+End
+If A=21
+Then
+If ʟRPGθ(2)=0
+Then
+Goto F1
+End
+If ʟRPGθ(2)=30
+Then
+Lbl MA
+randInt(1,4)+ʟRPGF(1)+ʟRPGF(3)-ʟRPGC(2)→B
+If B≤0
+Then
+Text(0,0,"THE ENEMY MISSED!
+0→B
+Else
+Text(0,0,"THE ENEMY DOES ",B," DAMAGE.
+End
+ʟRPGC(4)-B→ʟRPGC(4
+0→C
+94→B
+While C≠48
+Text(0,C," 
+Text(0,B," 
+C+1→C
+B-1→B
+End
+Text(48,24,ʟRPGC(4
+If ʟRPGC(4)≤0
+Then
+ClrDraw
+Text(0,0,"YOU ARE DEAD.
+{0,0,0,0,0,0,0,0→ʟRPGC
+Return
+End
+0→B
+Goto AT

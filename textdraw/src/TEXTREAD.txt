@@ -1,0 +1,621 @@
+0→Xmin:0→Ymin:94→Xmax:62→Ymax
+0→B:0→C:1→S
+AxesOff
+ClrDraw
+DispGraph
+Lbl 0
+ʟTXT(S)→A
+If A=45
+Then
+B-4→B
+If S≠1
+Then
+S-1→S
+End
+0→E
+Lbl D
+0→D
+While D≠4
+Pt-Off(B+E,⁻C+62-D
+D+1→D
+End
+If E=3
+Then
+0→D:0→E
+If B<0
+Then
+88→B
+C-5→C
+End
+Goto 0
+End
+E+1→E
+Goto D
+End
+If A<40
+Then
+Goto 0
+End
+If A=41
+Then
+3→D
+While D≠0
+Pt-On(B,⁻C+62-D
+D-1→D
+End
+Pt-On(B+1,⁻C+62
+1→D
+While D≠4
+Pt-On(B+2,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+60
+B+4→B
+Goto 1
+End
+If A=42
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+61
+Pt-On(B+1,⁻C+61
+Pt-On(B+2,⁻C+60
+Pt-On(B+1,⁻C+59
+B+4→B
+Goto 1
+End
+If A=43
+Then
+Pt-On(B+2,⁻C+62
+Pt-On(B+1,⁻C+62
+Pt-On(B,⁻C+61
+Pt-On(B,⁻C+60
+Pt-On(B+1,⁻C+59
+Pt-On(B+2,⁻C+59
+B+4→B
+Goto 1
+End
+If A=51
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+61
+Pt-On(B+2,⁻C+60
+Pt-On(B+1,⁻C+59
+B+4→B
+Goto 1
+End
+If A=52
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+62
+Pt-On(B+1,⁻C+61
+Pt-On(B+1,⁻C+59
+Pt-On(B+2,⁻C+59
+B+4→B
+Goto 1
+End
+If A=53
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+62
+Pt-On(B+1,⁻C+61
+B+4→B
+Goto 1
+End
+If A=54
+Then
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+62
+Pt-On(B,⁻C+61
+Pt-On(B,⁻C+60
+Pt-On(B+1,⁻C+59
+Pt-On(B+2,⁻C+59
+Pt-On(B+2,⁻C+60
+B+4→B
+Goto 1
+End
+If A=55
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+0→D
+While D≠4
+Pt-On(B+2,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+60
+B+4→B
+Goto 1
+End
+If A=61
+Then
+Pt-On(B,⁻C+62
+Pt-On(B+2,⁻C+62
+0→D
+While D≠4
+Pt-On(B+1,⁻C+62-D
+D+1→D
+End
+Pt-On(B,⁻C+59
+Pt-On(B+2,⁻C+59
+B+4→B
+Goto 1
+End
+If A=62
+Then
+0→D
+While D≠3
+Pt-On(B+2,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+59
+Pt-On(B,⁻C+60
+B+4→B
+Goto 1
+End
+If A=63
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+61
+Pt-On(B+2,⁻C+62
+Pt-On(B+1,⁻C+60
+Pt-On(B+2,⁻C+59
+B+4→B
+Goto 1
+End
+If A=64
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+59
+Pt-On(B+2,⁻C+59
+B+4→B
+Goto 1
+End
+If A=65
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+0→D
+While D≠4
+Pt-On(B+2,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+61
+B+4→B
+Goto 1
+End
+If A=71
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+0→D
+While D≠4
+Pt-On(B+2,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+61
+Pt-On(B+1,⁻C+60
+B+4→B
+Goto 1
+End
+If A=72
+Then
+Pt-On(B+1,⁻C+62
+Pt-On(B,⁻C+61
+Pt-On(B,⁻C+60
+Pt-On(B+1,⁻C+59
+Pt-On(B+2,⁻C+60
+Pt-On(B+2,⁻C+61
+B+4→B
+Goto 1
+End
+If A=73
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+61
+Pt-On(B+1,⁻C+60
+B+4→B
+Goto 1
+End
+If A=74
+Then
+Pt-On(B+1,⁻C+62
+Pt-On(B,⁻C+61
+Pt-On(B,⁻C+60
+Pt-On(B+1,⁻C+59
+Pt-On(B+2,⁻C+60
+Pt-On(B+2,⁻C+61
+Pt-On(B+2,⁻C+59
+Pt-On(B+1,⁻C+60
+B+4→B
+Goto 1
+End
+If A=75
+Then
+0→D
+While D≠4
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+61
+Pt-On(B+1,⁻C+60
+Pt-On(B+2,⁻C+59
+B+4→B
+Goto 1
+End
+If A=81
+Then
+Pt-On(B+1,⁻C+62
+Pt-On(B,⁻C+61
+Pt-On(B+1,⁻C+60
+Pt-On(B,⁻C+59
+B+3→B
+Goto 1
+End
+If A=82
+Then
+0→D
+While D≠3
+Pt-On(B+D,⁻C+62
+D+1→D
+End
+0→D
+While D≠4
+Pt-On(B+1,⁻C+62-D
+D+1→D
+End
+B+4→B
+Goto 1
+End
+If A=83
+Then
+0→D
+While D≠3
+Pt-On(B,⁻C+62-D
+D+1→D
+End
+Pt-On(B+1,⁻C+59
+0→D
+While D≠4
+Pt-On(B+2,⁻C+62-D
+D+1→D
+End
+B+4→B
+Goto 1
+End
+If A=84
+Then
+Line(B,⁻C+62,B+1,⁻C+59
+Line(B+1,⁻C+59,B+2,⁻C+62
+B+4→B
+Goto 1
+End
+If A=85
+Then
+Line(B,⁻C+62,B,⁻C+59
+Pt-On(B+1,⁻C+59
+Pt-On(B+1,⁻C+60
+Line(B+2,⁻C+59,B+2,⁻C+62
+B+4→B
+Goto 1
+End
+If A=91
+Then
+Line(B,⁻C+61,B+2,⁻C+59
+Line(B,⁻C+59,B+2,⁻C+61
+B+4→B
+Goto 1
+End
+If A=92
+Then
+Pt-On(B,⁻C+62
+Pt-On(B+2,⁻C+62
+Line(B+1,⁻C+61,B+1,⁻C+59
+B+4→B
+Goto 1
+End
+If A=93
+Then
+Pt-On(B,⁻C+62
+Pt-On(B+1,⁻C+62
+Pt-On(B+1,⁻C+61
+Pt-On(B,⁻C+60
+Pt-On(B,⁻C+59
+Pt-On(B+1,⁻C+59
+B+3→B
+Goto 1
+End
+If A=94
+Then
+Goto N
+End
+If A=95
+Then
+Pt-On(B,⁻C+62
+Pt-On(B+2,⁻C+62
+B+4→B
+Goto 1
+End
+If A=102
+Then
+B+1→B
+Goto 1
+End
+If A≥103
+Then
+Goto SZ
+End
+Lbl 1
+S+1→S
+If B≥90
+Then
+0→B
+5+C→C
+End
+Goto 0
+Lbl SZ
+ClrHome
+1→D
+Output(1,1,"SONDERZEICHEN-------------------
+Output(3,1,". ( ) : ? ! [ ]
+Lbl S1
+0→A
+Output(4,D,"X
+While A=0
+getKey→A
+End
+Output(4,D," 
+If A≠24 and A≠26 and A≠21 and A≠45
+Then
+Goto S1
+End
+If A=45
+Then
+DispGraph
+Goto 1
+End
+If A=24 and D≠1
+Then
+D-2→D
+End
+If A=26 and D≠15
+Then
+D+2→D
+End
+If A=21
+Then
+If D=1
+Then
+110→ʟTXT(S
+Pt-On(B,⁻C+59
+B+3→B
+Goto 1
+End
+If D=3
+Then
+Pt-On(B+1,⁻C+62
+Pt-On(B,⁻C+61
+Pt-On(B,⁻C+60
+Pt-On(B+1,⁻C+59
+111→ʟTXT(S
+B+4→B
+Goto 1
+End
+If D=5
+Then
+Pt-On(B,⁻C+62
+Pt-On(B+1,⁻C+61
+Pt-On(B+1,⁻C+60
+Pt-On(B,⁻C+59
+112→ʟTXT(S
+B+4→B
+Goto 1
+End
+If D=7
+Then
+Pt-On(B,⁻C+59
+Pt-On(B,⁻C+61
+113→ʟTXT(S
+B+3→B
+Goto 1
+End
+If D=9
+Then
+Pt-On(B,⁻C+62
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+61
+Pt-On(B+1,⁻C+60
+Pt-On(B+1,⁻C+59
+114→ʟTXT(S
+B+4→B
+Goto 1
+End
+If D=13
+Then
+Line(B,⁻C+62,B,⁻C+59
+Pt-On(B+1,⁻C+62
+Pt-On(B+1,⁻C+59
+B+3→B
+115→ʟTXT(S
+Goto 1
+End
+If D=15
+Then
+Pt-On(B,⁻C+62
+Pt-On(B,⁻C+59
+Line(B+1,⁻C+62,B+1,⁻C+59
+B+3→B
+116→ʟTXT(S
+Goto 1
+End
+End
+Goto S1
+Lbl N
+ClrHome
+Output(1,1,"ZAHLEN--------------------------1234567890
+1→D
+Lbl N1
+Output(4,D,"X
+0→A
+While A=0
+getKey→A
+End
+Output(4,D," 
+If A=45
+Then
+DispGraph
+Goto 1
+End
+If A=24 and D≠1
+Then
+D-1→D
+End
+If A=26 and D≠10
+Then
+D+1→D
+End
+If A=21
+Then
+If D=1
+Then
+Pt-On(B,⁻C+61
+Line(B+1,⁻C+62,B+1,⁻C+59
+Pt-On(B,⁻C+59
+Pt-On(B+2,⁻C+59
+120→ʟTXT(S
+B+4→B
+Goto 1
+End
+If D=2
+Then
+Pt-On(B,⁻C+61
+Pt-On(B+1,⁻C+62
+Pt-On(B+2,⁻C+61
+Pt-On(B+1,⁻C+60
+Line(B,⁻C+59,B+2,⁻C+59
+B+4→B
+121→ʟTXT(S
+Goto 1
+End
+If D=3
+Then
+Line(B,⁻C+62,B+1,⁻C+62
+Line(B+2,⁻C+61,B+2,⁻C+60
+Line(B+1,⁻C+59,B,⁻C+59
+Pt-On(B+1,⁻C+61
+B+4→B
+122→ʟTXT(S
+Goto 1
+End
+If D=4
+Then
+Line(B,⁻C+62,B,⁻C+60
+Line(B+2,⁻C+62,B+2,⁻C+59
+Pt-On(B+1,⁻C+60
+B+4→B
+123→ʟTXT(S
+Goto 1
+End
+If D=5
+Then
+Line(B,⁻C+62,B+2,⁻C+62
+Line(B,⁻C+61,B+1,⁻C+61
+Pt-On(B+2,⁻C+60
+Line(B,⁻C+59,B+1,⁻C+59
+B+4→B
+124→ʟTXT(S
+Goto 1
+End
+If D=6
+Then
+Line(B,⁻C+62,B,⁻C+59
+Pt-On(B+1,⁻C+62
+Line(B+1,⁻C+60,B+1,⁻C+59
+B+3→B
+125→ʟTXT(S
+Goto 1
+End
+If D=7
+Then
+Line(B,⁻C+62,B+2,⁻C+62
+Line(B+2,⁻C+62,B+1,⁻C+59
+126→ʟTXT(S
+B+4→B
+Goto 1
+End
+If D=8
+Then
+0→E
+While E≠3
+Line(B+E,⁻C+62,B+E,⁻C+59
+E+1→E
+End
+Pt-Off(B+1,⁻C+60
+B+4→B
+127→ʟTXT(S
+Goto 1
+End
+If D=9
+Then
+Line(B+1,⁻C+62,B+1,⁻C+60
+Pt-On(B,⁻C+62
+Pt-On(B,⁻C+61
+Pt-On(B,⁻C+59
+B+3→B
+128→ʟTXT(S
+Goto 1
+End
+If D=10
+Then
+Line(B,⁻C+62,B,⁻C+59
+Pt-On(B+1,⁻C+62
+Line(B+2,⁻C+62,B+2,⁻C+59
+Pt-On(B+1,⁻C+59
+B+4→B
+129→ʟTXT(S
+Goto 1
+End
+End
+Goto N1

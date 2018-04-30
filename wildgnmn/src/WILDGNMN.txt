@@ -1,0 +1,520 @@
+UnArchive ʟGUN
+UnArchive ʟGUNN
+Text(0,0,"LOADING…
+{100,90,80,75,70,65,60,56,52,48,44,40,37,34,30,28,26,24,22,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1→ʟGUNL
+AxesOff
+0→Xmin:94→Xmax:0→Ymin:62→Ymax
+Lbl M
+ClrDraw
+Text(⁻1,0,16,"WILD GUNMAN
+Line(0,56,0,58
+Line(1,56,1,60
+Line(2,61,7,61
+Line(2,60,7,60
+Line(2,59,7,59
+Line(4,59,2,57
+Pt-On(7,62
+Pt-On(0,61
+Text(9,28,"VERSION: 1.2
+Text(23,37,"START
+Text(30,29,"HIGH SCORE
+Text(37,39,"QUIT
+23→C
+Line(23,41,69,41
+Line(22,40,22,18
+Line(70,40,70,18
+Line(23,17,69,17
+Lbl M1
+Line(24,⁻C+58,24,⁻C+61
+Line(25,⁻C+58,25,⁻C+61
+Pt-On(26,⁻C+59
+Pt-On(26,⁻C+60
+Pt-On(66,⁻C+59
+Pt-On(66,⁻C+60
+Line(67,⁻C+58,67,⁻C+61
+Line(68,⁻C+58,68,⁻C+61
+0→A
+While A=0
+getKey→A
+End
+Text(C,24,"   
+Text(C,66,"   
+If A=25 and C≠23
+Then
+C-7→C
+Goto M1
+End
+If A=34 and C≠37
+Then
+C+7→C
+Goto M1
+End
+If A=21
+Then
+If C=23
+Then
+0→T
+1→L
+0→S
+0→W
+Goto G
+End
+If C=30
+Then
+ClrDraw
+Text(⁻1,0,0,"HIGH SCORES
+Horizontal 53
+Text(11,0,"RANK
+Text(11,20,"NAME
+Text(11,40,"SCORE
+Text(11,80,"LVL
+Line(18,53,18,7
+Line(38,53,38,7
+Line(78,53,78,7
+Horizontal 44
+Horizontal 7
+20→A
+1→B
+While A≠55
+Text(A,0,B
+A+7→A
+B+1→B
+End
+0→|N
+0→B
+0→C
+Lbl H1
+|N+1→|N
+While C≠35
+ʟGUNN(|N→A
+If A=0
+Then
+" →Str1
+Goto H2
+End
+If A=41
+Then
+"A→Str1
+Goto H2
+End
+If A=42
+Then
+"B→Str1
+Goto H2
+End
+If A=43
+Then
+"C→Str1
+Goto H2
+End
+If A=51
+Then
+"D→Str1
+Goto H2
+End
+If A=52
+Then
+"E→Str1
+Goto H2
+End
+If A=53
+Then
+"F→Str1
+Goto H2
+End
+If A=54
+Then
+"G→Str1
+Goto H2
+End
+If A=55
+Then
+"H→Str1
+Goto H2
+End
+If A=61
+Then
+"I→Str1
+Goto H2
+End
+If A=62
+Then
+"J→Str1
+Goto H2
+End
+If A=63
+Then
+"K→Str1
+Goto H2
+End
+If A=64
+Then
+"L→Str1
+Goto H2
+End
+If A=65
+Then
+"M→Str1
+Goto H2
+End
+If A=71
+Then
+"N→Str1
+Goto H2
+End
+If A=72
+Then
+"O→Str1
+Goto H2
+End
+If A=73
+Then
+"P→Str1
+Goto H2
+End
+If A=74
+Then
+"Q→Str1
+Goto H2
+End
+If A=75
+Then
+"R→Str1
+Goto H2
+End
+If A=81
+Then
+"S→Str1
+Goto H2
+End
+If A=82
+Then
+"T→Str1
+Goto H2
+End
+If A=83
+Then
+"U→Str1
+Goto H2
+End
+If A=84
+Then
+"V→Str1
+Goto H2
+End
+If A=85
+Then
+"W→Str1
+Goto H2
+End
+If A=91
+Then
+"X→Str1
+Goto H2
+End
+If A=92
+Then
+"Y→Str1
+Goto H2
+End
+If A=93
+Then
+"Z→Str1
+End
+Lbl H2
+Text(20+C,20+B,Str1
+B+4→B
+If B=12
+Then
+0→B
+C+7→C
+End
+Goto H1
+End
+0→B
+1→A
+While B≠35
+Text(20+B,40,ʟGUN(A
+B+7→B
+A+1→A
+End
+0→B
+While B≠35
+Text(20+B,80,ʟGUN(A
+B+7→B
+A+1→A
+End
+Text(56,0,"[CLEAR]=BACK:[DEL]=RESET
+Lbl H3
+0→A
+While A=0
+getKey→A
+End
+If A=23
+Then
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0→ʟGUNN
+{0,0,0,0,0,0,0,0,0,0→ʟGUN
+Goto M
+End
+If A=45
+Then
+Goto M
+Else
+Goto H3
+End
+End
+If C=37
+Then
+AxesOn
+ZStandard
+ClrHome
+Disp 
+Archive ʟGUN
+Archive ʟGUNN
+ClrList ʟGUNL,ʟGUNO
+Return
+End
+End
+Goto M1
+Lbl G
+ClrDraw
+Text(49,0,"LEVEL: ",L
+Text(56,0,"SCORE: ",S
+15→A
+While A≤28
+Horizontal A
+A+1+(A/100)→A
+End
+Pt-On(20,29
+Pt-On(22,29
+Line(21,30,21,33
+Pt-On(20,31
+Pt-On(22,32
+Pt-On(20,34
+Pt-On(22,34
+Pt-On(21,35
+Line(74,30,74,33
+Pt-On(73,29
+Pt-On(75,29
+Pt-On(73,32
+Pt-On(75,31
+Pt-On(73,34
+Pt-On(75,34
+Pt-On(74,35
+Circle(47,28,13
+Line(10,28,10,38
+Pt-On(11,39
+Line(12,39,12,34
+Pt-On(13,35
+Pt-On(14,36
+Line(15,35,15,34
+Line(14,34,12,33
+Line(12,32,12,28
+42→A
+While A≤63
+Horizontal A
+A+1+(10/A)→A
+End
+ʟGUNL(L→A
+randInt(A-L,A+L)→A
+If A≤0
+Then
+ʟGUNL(L→A
+randInt(A-1,A+1)→A
+End
+Lbl G2
+0→B
+While A≠0 and B=0
+A-1→A
+getKey→B
+End
+If B≠0
+Then
+S-25→S
+Goto G2
+End
+Text(28,38,"FIRE!
+Lbl G1
+0→B
+While B=0
+getKey→B
+A-1→A
+End
+If ⁻A>ʟGUNL(L
+Then
+Goto D
+End
+If B=21 and A≠⁻1
+Then
+Text(37,0,"YOU SHOT YOUR ENEMY!
+Send(θ
+ClrDraw
+⁻A→R
+L*10+A→A
+A+S→S
+Text(0,0,"SCORE: ",S
+Text(7,0,"TIME: ",R,"/",ʟGUNL(L
+Text(14,0,"PRESS ENTER!
+L+1→L
+Pause 
+Goto G
+Else
+Goto G1
+End
+Lbl D
+ClrDraw
+Text(0,0,"YOU WERE SHOT...
+Text(7,0,"CHECKING HIGH SCORES...
+L→Z
+ʟGUN(1→I
+ʟGUN(2→J
+ʟGUN(3→K
+ʟGUN(4→L
+ʟGUN(5→M
+ʟGUN(6→N
+ʟGUN(7→O
+ʟGUN(8→P
+ʟGUN(9→Q
+ʟGUN(10→R
+ʟGUNN→ʟGUNO
+If S≥I
+Then
+0→B
+While B≠2
+ʟGUNO(B+10→ʟGUNN(13+B
+B+1→B
+End
+0→B
+While B≠2
+ʟGUNO(B+7→ʟGUNN(10+B
+B+1→B
+End
+0→B
+While B≠2
+ʟGUNO(4+B→ʟGUNN(7+B
+B+1→B
+End
+0→B
+While B≠2
+ʟGUNO(1+B→ʟGUNN(4+B
+B+1→B
+End
+L→M
+Q→R
+K→L
+P→Q
+J→K
+O→P
+I→J
+N→O
+S→I
+Z→N
+Text(14,0,"YOU ARE 1.ST!
+1→|N
+Goto D1
+End
+If S≥J
+Then
+L→M
+Q→R
+K→L
+P→Q
+J→K
+O→P
+S→J
+Z→O
+0→B
+While B≠2
+ʟGUNO(10+B→ʟGUNN(13+B
+B+1→B
+End
+0→B
+While B≠2
+ʟGUNO(7+B→ʟGUNN(10+B
+B+1→B
+End
+0→B
+While B≠0
+ʟGUNO(4+B→ʟGUNN(7+B
+End
+Text(14,0,"YOU ARE 2.ND!
+4→|N
+Goto D1
+End
+If S≥K
+Then
+0→B
+While B≠2
+ʟGUNO(10+B→ʟGUNN(B+13
+B+1→B
+End
+0→B
+While B≠2
+ʟGUNO(7+B→ʟGUNN(10+B
+B+1→B
+End
+L→M
+Q→R
+K→L
+P→Q
+S→K
+Z→P
+Text(14,0,"YOU ARE 3.RD!
+7→|N
+Goto D1
+End
+If S≥L
+Then
+0→B
+While B≠0
+ʟGUNO(10+B→ʟGUNN(13+B
+B+1→B
+End
+L→M
+Q→R
+S→L
+Z→Q
+Text(14,0,"YOU ARE 4.TH!
+10→|N
+Goto D1
+End
+If S≥M
+Then
+S→M
+Z→R
+Text(14,0,"YOU ARE 5.TH!
+13→|N
+Goto D1
+Else
+Text(14,0,"NO HIGH SCORE...
+Goto D2
+End
+Lbl D1
+Text(28,0,"YOUR NAME (NO VISUAL)
+⁻1→B
+Lbl D3
+B+1→B
+0→A
+While A=0
+getKey→A
+End
+If A>93 and A<41 or A=44 or A=45
+Then
+B-1→B
+Goto D3
+End
+A→ʟGUNN(|N+B
+If B=2
+Then
+Goto D2
+End
+Goto D3
+Lbl D2
+Text(21,0,"SAVING HIGH SCORES...
+{I,J,K,L,M,N,O,P,Q,R→ʟGUN
+0→A
+While A≠66
+A+1→A
+End
+ClrDraw
+Goto M

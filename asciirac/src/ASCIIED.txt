@@ -1,0 +1,46 @@
+{0,0→ʟASCII
+3→D
+ClrHome
+1→T:3→S
+Output(1,1,"^^
+Lbl 0
+0→A
+While A=0
+getKey→A
+End
+If A≠25 and A≠24 and A≠26 and A≠55
+Then
+Goto 0
+End
+If A=24
+Then
+⁻1→ʟASCII(D)
+Output(T,S,"<
+D+1→D
+End
+If A=25
+Then
+0→ʟASCII(D
+D+1→D
+Output(T,S,"^
+End
+If A=26
+Then
+1→ʟASCII(D
+D+1→D
+Output(T,S,">
+End
+If A=55
+Then
+π→ʟASCII(D
+π→ʟASCII(D+1
+ClrHome
+Return
+End
+S+1→S
+If S=17
+Then
+1→S
+T+1→T
+End
+Goto 0

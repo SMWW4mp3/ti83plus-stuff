@@ -1,0 +1,49 @@
+ClrHome
+If ʟRPGB(3)=1
+Then
+Output(1,1,"MAHOME
+End
+If ʟRPGB(3)=2
+Then
+Output(1,1,"PORTIA
+End
+If ʟRPGB(3)=3
+Then
+Output(1,1,"MISTA
+End
+Lbl 0
+Output(3,1,"-/=>
+Output(3,14,"INNX
+Output(4,16,"X
+Output(7,2,"ITEM
+Output(8,3,"X
+Output(7,11,"MAGIC
+Output(8,14,"X
+0→A
+Output(ʟRPGB(2),ʟRPGB(1),"π
+While A=0
+getKey→A
+End
+Output(ʟRPGB(2),ʟRPGB(1)," 
+If A=24 and ʟRPGB(1)≠1
+Then
+ʟRPGB(1)-1→ʟRPGB(1
+End
+If A=25 and ʟRPGB(2)≠2
+Then
+ʟRPGB(2)-1→ʟRPGB(2
+End
+If A=26 and ʟRPGB(1)≠16
+Then
+ʟRPGB(1)+1→ʟRPGB(1
+End
+If A=34 and ʟRPGB(2)≠8
+Then
+ʟRPGB(2)+1→ʟRPGB(2
+End
+If A=31
+Then
+prgmRPGMENU
+ClrDraw
+End
+Goto 0

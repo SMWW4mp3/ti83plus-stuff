@@ -1,0 +1,90 @@
+Lbl ME
+Menu("TUNNEL","START",S,"INSTALL+PLAY",I,"EXIT",E
+Lbl E
+AxesOn
+ZStandard
+ClrHome
+Return
+Lbl I
+{0,0,1,0,0,0,0→ʟT
+Lbl S
+AxesOff
+0→Xmin:0→Ymin:94→Xmax:62→Ymax
+1→ʟT(1
+31→ʟT(2
+1→ʟT(3
+0→ʟT(4
+1→|N
+0→I%
+Lbl L
+ClrDraw
+4→A:31+3→B
+A→D:B→E
+Line(A,B,0,62
+Line(A,B-10/ʟT(3),0,0
+0→F
+While A≠96
+Line(A,B-10/ʟT(3)+F,D,E-10/ʟT(3)+G
+Line(A,B,D,E
+A→D:B→E
+A+4→A
+F→G
+randInt(⁻2,3)-ʟT(3)→F
+randInt(⁻3,3)+B→B
+End
+0→A
+While ʟT(1)≠93
+Pxl-On(ʟT(2),ʟT(1)-1
+Pxl-On(ʟT(2),ʟT(1)
+getKey→A
+If A=25 and ʟT(2)≠0
+Then
+ʟT(2)-1→ʟT(2
+End
+If A=34 and ʟT(2)≠62
+Then
+ʟT(2)+1→ʟT(2
+End
+ʟT(1)+2→ʟT(1
+If pxl-Test(ʟT(2),ʟT(1))=1
+Then
+Goto G
+End
+End
+94|N→I%
+|N+1→|N
+94*ʟT(3)+ʟT(4)→A
+ʟT(5)→B
+ʟT(6)→C
+ʟT(7)→D
+{1,31,ʟT(3)+.25,A,B,C,D→ʟT
+ClrDraw
+Goto L
+Lbl G
+ClrDraw
+Text(0,0,"GAME OVER AT LEVEL:
+Text(0,66,|N
+Text(7,0,"SCORE:
+ʟT(1)*ʟT(3)+ʟT(4→ʟT(4
+Text(14,22,ʟT(4
+If ʟT(4)>ʟT(5
+Then
+Text(21,0,"NEW HIGHSCORE!
+ʟT(4)→ʟT(5
+Else
+Text(14,50,"/
+Text(14,54,ʟT(5
+End
+ʟT(4)+ʟT(7)→ʟT(7)
+|N+ʟT(1)+I%→I%
+I%+ʟT(6)→ʟT(6
+Text(28,0,"METERS:
+Text(35,24,ʟT(6
+Text(49,0,"ALL SCORES:
+Text(49,40,ʟT(7)
+Send(θ
+0→A
+While A=0
+getKey→A
+End
+Goto ME

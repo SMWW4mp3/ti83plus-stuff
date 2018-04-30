@@ -1,0 +1,67 @@
+0→Xmin
+94→Xmax
+0→Ymin
+62→Ymax
+AxesOff
+If ʟRPGM(1)≠1
+Then
+Line(1,1,9,6
+Line(9,6,15,9
+Line(15,9,1,33
+Line(1,33,15,61
+Line(15,61,33,49
+Line(33,49,64,34
+Line(64,34,65,60
+Line(65,60,80,58
+Line(80,58,92,61
+Line(92,61,80,30
+Line(80,30,67,12
+Line(67,12,80,15
+Line(80,15,75,6
+Line(75,6,50,3
+Line(50,3,23,10
+Line(23,10,1,1
+Line(30,30,35,32
+Line(35,32,42,28
+Line(42,28,38,23
+Line(38,23,30,30
+Pt-On(14,14
+Pt-On(26,11
+
+StorePic Pic1
+1→ʟRPGM(1)
+End
+ClrDraw
+RecallPic Pic1
+Lbl 0
+0→A
+Pt-On(ʟRPGA(1),ʟRPGA(2)
+While A=0
+getKey→A
+End
+If A=24 and pxl-Test((62-ʟRPGA(2)),ʟRPGA(1)-1)=0
+Then
+Pt-Off(ʟRPGA(1),ʟRPGA(2)
+ʟRPGA(1)-1→ʟRPGA(1)
+End
+If A=26 and pxl-Test((62-ʟRPGA(2)),ʟRPGA(1)+1)=0
+Then
+Pt-Off(ʟRPGA(1),ʟRPGA(2)
+ʟRPGA(1)+1→ʟRPGA(1)
+End
+If A=25 and pxl-Test((62-ʟRPGA(2)-1),ʟRPGA(1))=0
+Then
+Pt-Off(ʟRPGA(1),ʟRPGA(2)
+ʟRPGA(2)+1→ʟRPGA(2)
+End
+If A=34 and pxl-Test((62-ʟRPGA(2)+1),ʟRPGA(1))=0
+Then
+Pt-Off(ʟRPGA(1),ʟRPGA(2)
+ʟRPGA(2)-1→ʟRPGA(2)
+End
+If ʟRPGA(1)≥13 and ʟRPGA(1)≤15 and ʟRPGA(2)≥13 and ʟRPGA(2)≤15 and A=21
+Then
+{8,2,1→ʟRPGB
+prgmRPGCITY
+End
+Goto 0
